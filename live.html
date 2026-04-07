@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream - Word of God Deliverance Vineyard Church</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-church"></i> Word of God Deliverance
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="live-container">
+        <!-- Main Video Player -->
+        <div class="video-main">
+            <video id="liveVideo" autoplay muted>
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Video Overlay (Top Section) -->
+            <div class="video-overlay top">
+                <div class="live-badge">
+                    <span class="live-dot"></span>
+                    <span class="live-text">LIVE</span>
+                </div>
+                <button class="close-btn" id="closeBtn" title="Close live stream" aria-label="Close live stream">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Video Overlay (Bottom Section) -->
+            <div class="video-overlay bottom">
+                <div class="streamer-info">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23999'/%3E%3C/svg%3E" alt="Streamer" class="streamer-avatar">
+                    <div class="streamer-details">
+                        <h3 class="streamer-name">Pastor Williams</h3>
+                        <p class="view-count"><i class="fas fa-eye"></i> 1.2K watching</p>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar">
+            <!-- Header -->
+            <div class="sidebar-header">
+                <h2>Live Chat</h2>
+            </div>
+
+            <!-- Viewers List -->
+            <div class="viewers-section">
+                <h4>Viewers <span class="viewer-count">1.2K</span></h4>
+                <div class="viewers-list">
+                    <div class="viewer-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23999'/%3E%3C/svg%3E" alt="Viewer">
+                        <span>John D.</span>
+                    </div>
+                    <div class="viewer-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23999'/%3E%3C/svg%3E" alt="Viewer">
+                        <span>Mary K.</span>
+                    </div>
+                    <div class="viewer-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23999'/%3E%3C/svg%3E" alt="Viewer">
+                        <span>Alex M.</span>
+                    </div>
+                    <div class="viewer-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23999'/%3E%3C/svg%3E" alt="Viewer">
+                        <span>Sarah J.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <div class="comments-list" id="commentsList">
+                    <div class="comment">
+                        <div class="comment-avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23999'/%3E%3C/svg%3E" alt="User"></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-username">John D.</span>
+                                <span class="comment-time">1m</span>
+                            </div>
+                            <p class="comment-text">Praise God! 🙏</p>
+                        </div>
+                        <button class="comment-like" title="Like comment" aria-label="Like comment"><i class="fas fa-heart"></i></button>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23999'/%3E%3C/svg%3E" alt="User"></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-username">Mary K.</span>
+                                <span class="comment-time">2m</span>
+                            </div>
+                            <p class="comment-text">Amen! Keep spreading the word</p>
+                        </div>
+                        <button class="comment-like" title="Like comment" aria-label="Like comment"><i class="fas fa-heart"></i></button>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23999'/%3E%3C/svg%3E" alt="User"></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-username">Alex M.</span>
+                                <span class="comment-time">3m</span>
+                            </div>
+                            <p class="comment-text">Thank you for this message</p>
+                        </div>
+                        <button class="comment-like" title="Like comment" aria-label="Like comment"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment Input -->
+            <div class="comment-input-section">
+                <input type="text" id="commentInput" placeholder="Say something..." class="comment-input">
+                <button id="sendCommentBtn" class="send-btn" title="Send comment" aria-label="Send comment"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Action Buttons -->
+    <div class="bottom-actions">
+        <button class="action-btn like-btn" id="likeBtn" title="Like">
+            <i class="fas fa-heart"></i>
+            <span class="like-count">0</span>
+        </button>
+        <button class="action-btn share-btn" id="shareBtn" title="Share">
+            <i class="fas fa-share"></i>
+        </button>
+        <button class="action-btn gift-btn" id="giftBtn" title="Send Gift">
+            <i class="fas fa-gift"></i>
+        </button>
+        <button class="action-btn fullscreen-btn" id="fullscreenBtn" title="Fullscreen">
+            <i class="fas fa-expand"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Comment Input -->
+    <div class="mobile-comment-input">
+        <input type="text" id="mobileCommentInput" placeholder="Say something..." class="comment-input">
+        <button id="mobileSendCommentBtn" class="send-btn" title="Send comment" aria-label="Send comment"><i class="fas fa-paper-plane"></i></button>
+    </div>
+
+    <!-- Gift Modal -->
+    <div class="modal" id="giftModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Send a Gift</h3>
+            <div class="gifts-grid">
+                <div class="gift-item" data-gift="heart">
+                    <span class="gift-emoji">❤️</span>
+                    <p>Heart</p>
+                    <span class="gift-price">$0.99</span>
+                </div>
+                <div class="gift-item" data-gift="star">
+                    <span class="gift-emoji">⭐</span>
+                    <p>Star</p>
+                    <span class="gift-price">$1.99</span>
+                </div>
+                <div class="gift-item" data-gift="diamond">
+                    <span class="gift-emoji">💎</span>
+                    <p>Diamond</p>
+                    <span class="gift-price">$4.99</span>
+                </div>
+                <div class="gift-item" data-gift="rose">
+                    <span class="gift-emoji">🌹</span>
+                    <p>Rose</p>
+                    <span class="gift-price">$0.99</span>
+                </div>
+                <div class="gift-item" data-gift="fire">
+                    <span class="gift-emoji">🔥</span>
+                    <p>Fire</p>
+                    <span class="gift-price">$1.99</span>
+                </div>
+                <div class="gift-item" data-gift="crown">
+                    <span class="gift-emoji">👑</span>
+                    <p>Crown</p>
+                    <span class="gift-price">$9.99</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Share Live Stream</h3>
+            <div class="share-options">
+                <button class="share-option" title="Share on Facebook" aria-label="Share on Facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </button>
+                <button class="share-option" title="Share on WhatsApp" aria-label="Share on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </button>
+                <button class="share-option" title="Share on Twitter" aria-label="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </button>
+                <button class="share-option" title="Copy link" aria-label="Copy link">
+                    <i class="fas fa-link"></i>
+                    <span>Copy Link</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
